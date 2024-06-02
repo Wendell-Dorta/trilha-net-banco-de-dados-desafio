@@ -8,14 +8,14 @@
 /*8*/  SELECT PrimeiroNome, UltimoNome FROM Atores WHERE Genero = 'M';
 /*9*/  SELECT PrimeiroNome, UltimoNome FROM Atores WHERE Genero = 'F' ORDER BY PrimeiroNome;
 /*10*/ SELECT F.Nome, G.Genero FROM FilmesGenero FG 
-	   INNER JOIN Filmes F ON FG.IdFilme = F.Id
-	   INNER JOIN Generos G ON FG.IdGenero = G.Id;
+       INNER JOIN Filmes F ON FG.IdFilme = F.Id
+       INNER JOIN Generos G ON FG.IdGenero = G.Id;
 /*11*/ SELECT F.Nome, G.Genero FROM FilmesGenero FG
-	   INNER JOIN Filmes F ON FG.IdFilme = F.Id
-	   INNER JOIN Generos G ON FG.IdGenero = G.Id
-	   WHERE G.Genero='Mistério';
+       INNER JOIN Filmes F ON FG.IdFilme = F.Id
+       INNER JOIN Generos G ON FG.IdGenero = G.Id
+       WHERE G.Genero='Mistério';
 /*12*/ SELECT F.Nome, (A.PrimeiroNome + ' ' + A.UltimoNome) as Ator, EF.Papel FROM ElencoFilme EF
-	   INNER JOIN Filmes F ON EF.IdFilme = F.Id
-	   INNER JOIN Atores A ON EF.Id = A.Id
-	   ORDER BY F.Nome, Ator;
+       INNER JOIN Filmes F ON EF.IdFilme = F.Id
+       INNER JOIN Atores A ON EF.Id = A.Id
+       ORDER BY F.Nome, Ator;
 
